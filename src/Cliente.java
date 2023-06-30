@@ -10,12 +10,12 @@ public class Cliente extends Thread{
     }
 
     public void run() {
-        int soma = Servidor.solicitaCalculadora(nome, numeros);
-        while (soma == 0) {
+        int recurso = Servidor.solicitaCalculadora(nome, numeros);
+        while (recurso == 0) {
 //            System.out.println("---------------------------------------\n⌛⌛ - " + nome + "" +
 //                    " aguardando recurso...");
-            Main.delay(4000);
-            soma = Servidor.solicitaCalculadora(nome, numeros);
+            Main.delay(10);
+            recurso = Servidor.solicitaCalculadora(nome, numeros);
         }
     }
 
