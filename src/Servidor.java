@@ -4,9 +4,6 @@ public class Servidor {
 
     private static boolean lockCalculadora1 = false;
     private static boolean lockCalculadora2 = false;
-//
-//    private static Calculadora cal1 = new Calculadora("CALCULADORA 1");
-//    private static Calculadora cal2 = new Calculadora("CALCULADORA 2");
 
     static Object lock1 = new Object();
     static Object lock2 = new Object();
@@ -32,18 +29,6 @@ public class Servidor {
             }
             return 1;
         }
-//        synchronized (cal1) {
-//            System.out.println("⚠️⚠️ - (" + cal1.getNome() + ") - " + nome + " entrou na Região Crítica");
-//            System.out.println("➕\uD83D\uDD22 - (" + cal1.getNome() + ") - A soma dos numeros do "+ nome + " é: " + cal1.somar(numeros));
-//            System.out.println("✅✅ - (" + cal1.getNome() + ") - " + nome + " saiu da Região Crítica");
-//        }
-//
-//        synchronized (cal2) {
-//            System.out.println("⚠️⚠️ - (" + cal2.getNome() + ") - " + nome + " entrou na Região Crítica");
-//            System.out.println("➕\uD83D\uDD22 - (" + cal2.getNome() + ") - A soma dos numeros do "+ nome + " é: " + cal2.somar(numeros));
-//            System.out.println("✅✅ - (" + cal2.getNome() + ") - " + nome + " saiu da Região Crítica");
-//
-//        }
 
         System.out.println("---------------------------------------\n⌛⌛ - " + nome + "" +
                 " aguardando recurso...");
